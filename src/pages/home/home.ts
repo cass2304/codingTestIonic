@@ -10,7 +10,7 @@ import { LoadingController } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {   
-    //this.presentLoading();
+    this.presentLoading();
   }
 
   presentLoading() {
