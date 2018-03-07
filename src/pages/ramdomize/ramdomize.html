@@ -1,0 +1,36 @@
+<!--
+  Generated template for the RamdomizePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="fixedCard">
+    <ion-card-content>
+      <ion-list no-lines>
+        <ion-item *ngFor="let label of labels">
+          <ion-label
+            [style.color]="label.color"
+            [attr.text-left]="label.align === 'left' ? '' : null"
+            [attr.text-center]="label.align === 'center' ? '' : null"
+            [attr.text-right]="label.align === 'right' ? '' : null"
+            [style.font-size]="label.fontSize"
+            [style.font-family]="label.fontFamily"
+            [style.font-style]="label.fontStyle"
+          >{{ label.text }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>    
+    <ion-input type="text"  placeholder="Type something..." (ionChange)='onChangeText($event.value)'></ion-input>
+  </ion-item>
+
+  <button ion-button full (click)='randomizeFormat()'>Randomize Styles</button>
+
+</ion-content>
